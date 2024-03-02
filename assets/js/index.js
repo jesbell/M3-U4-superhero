@@ -36,10 +36,6 @@ $("form").submit(function (event) {
           title: {
               text: "Gráfico de columnas con jQuery CanvasJS",
           },
-          legend:{
-            cursor: "pointer",
-            itemclick: explodePie
-          },
           data: [{
               type: "doughnut",
               startAngle: 60,
