@@ -15,9 +15,9 @@
   <body>
     <!-- Barra de navegación -->
     <nav class="navbar navbar-light navbar-expand-lg bg-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+      </button> -->
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="assets/img/sh2.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -27,40 +27,43 @@
     </nav>
     <!-- Contenido -->
     <header>
-      <div>
-        <img src="assets/img/sh1.jpg" alt="" width="" />
-      </div>
-      <div>
-        <h1>Encuentra tu SuperHero</h1>
-        <form action="">
-          <p>
-            <label for="superhero"
-              >Ingresa el número del SuperHero a buscar</label
-            ><br />
-            <input
-              type="text"
-              name="superhero"
-              id="superhero"
-              placeholder="Busca un heroe 🦸"
-            />
-          </p>
-          <p>
-            <input type="submit" value="Buscar" />
-          </p>
-        </form>
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-sm-5 mb-5"><img src="assets/img/sh1.jpg" alt="" width="" class="img-fluid mx-auto" /></div>
+          <div class="col-sm-6">
+            <h1>Encuentra tu SuperHero</h1>
+              <form action="">
+                <p>
+                  <label for="superhero" class="form-label">
+                    Ingresa el número del SuperHero a buscar
+                  </label>
+                  <input
+                    type="text"
+                    name="superhero"
+                    id="superhero"
+                    placeholder="Busca un heroe 🦸"
+                    class="form-control"
+                  />
+                </p>
+                <p>
+                  <input type="submit" value="Buscar" class="btn btn-warning" />
+                </p>
+              </form>
+          </div>
+        </div>
       </div>
     </header>
     <section id="superhero">
         <div class="container">
-          <h1 id="title" class="center-text"></h1>
+          <div class="text-center my-5"><h1 id="title"></h1></div>
           <div class="row align-items-start">
-            <div class="col-5" id="imgSuperHero"></div>
-            <div class="col" id="infoSuperHero"></div>
+            <div class="col-sm-5" id="imgSuperHero"></div>
+            <div class="col-sm-6" id="infoSuperHero"></div>
           </div>
         </div>
     </section>
     <section id="stats">
-        <div id="hero-stats"></div>
+        <div id="hero-stats" class="my-5"></div>
     </section>
 
     <!-- jQuery -->
