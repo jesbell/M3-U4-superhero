@@ -19,7 +19,7 @@ $("form").submit(function (event) {
         const $img = $("<img class='img-fluid mx-auto'>");
         $img.attr("src", data.image.url);
         const dataHero =`
-        <p class='h3 mb-5 border-bottom border-danger-subtle'>Nombre: ${data.name}</p>
+        <p class='h3 mb-5 border-bottom'>Nombre: ${data.name}</p>
         <p class="lh-sm">Conexiones: ${data.connections["group-affiliation"]}</p>
         <p class="lh-sm">Publicado por: ${data.biography.publisher}</p>
         <p class="lh-sm">Ocupación: ${data.work.occupation}</p>
@@ -34,7 +34,7 @@ $("form").submit(function (event) {
 
         var options = {
           title: {
-              text: "Gráfico de columnas con jQuery CanvasJS",
+              text: 'Estadisticas de poder para ' + data.name,
           },
           data: [{
               type: "doughnut",
@@ -44,12 +44,12 @@ $("form").submit(function (event) {
               indexLabel: "{label} - {y}",
               toolTipContent: "<b>{label}:</b> {y}",
               dataPoints: [
-                { y: data.powerstats["combat"], label: "Combat" },
-                { y: data.powerstats["durability"], label: "Durability" },
-                { y: data.powerstats["intelligence"], label: "Intelligence" },
-                { y: data.powerstats["power"], label: "Power"},
-                { y: data.powerstats["speed"], label: "Speed"},
-                { y: data.powerstats["strength"], label: "Strength"},
+                { y: data.powerstats["combat"], legendText: "Combat", label: "Combat" },
+                { y: data.powerstats["durability"], legendText: "Durability", label: "Durability" },
+                { y: data.powerstats["intelligence"], legendText: "Intelligence", label: "Intelligence" },
+                { y: data.powerstats["power"], legendText: "Power", label: "Power"},
+                { y: data.powerstats["speed"], legendText: "Speed", label: "Speed"},
+                { y: data.powerstats["strength"], legendText: "Strength", label: "Strength"},
               ],
           }],
         };
