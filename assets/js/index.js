@@ -2,7 +2,17 @@ $("form").submit(function (event) {
     event.preventDefault();
     const searchTerm = $("#superhero").val().trim();
     if (!searchTerm.match(/^\d+$/)) {
-      alert("Por favor, ingresa solo números.");
+      /* alert("Por favor, ingresa solo números."); */
+      $("#superhero").tooltip({
+        title: "Por favor, ingresa solo números.",
+        placement: "top",
+        trigger: "manual"
+      });
+      $("#superhero").tooltip("show");
+      // Oculta el tooltip después de un cierto período de tiempo
+      setTimeout(function() {
+          $("#superhero").tooltip("hide");
+      }, 3000);
       return;
     }
 
@@ -58,8 +68,12 @@ $("form").submit(function (event) {
         var chart = new CanvasJS.Chart("hero-stats", options);
         chart.render();
 
-      }      
-      // Si hay un error en la petición
+      },      
+      error: function(data) {
+        //esta función se activa si ocurrealgún error durante el proceso
+        console.log("Ha ocurrido un error");
       
+      },
+      async: true,
     });
 });
