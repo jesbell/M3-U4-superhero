@@ -19,14 +19,14 @@ $("form").submit(function (event) {
         const $img = $("<img class='img-fluid mx-auto'>");
         $img.attr("src", data.image.url);
         const dataHero =`
-        <p class='h3'>Nombre: ${data.name}</p>
-        <p>Conexiones: ${data.connections["group-affiliation"]}</p>
-        <p>Publicado por: ${data.biography.publisher}</p>
-        <p>Ocupación: ${data.work.occupation}</p>
-        <p>Primera Aparición: ${data.biography["first-appearance"]} </p>
-        <p>Altura: ${data.appearance.height} </p>
-        <p>Peso: ${data.appearance.weight}</p>
-        <p>Alianzas: ${data.biography.aliases} </p>`
+        <p class='h3 mb-5 border-bottom border-danger-subtle'>Nombre: ${data.name}</p>
+        <p class="lh-sm">Conexiones: ${data.connections["group-affiliation"]}</p>
+        <p class="lh-sm">Publicado por: ${data.biography.publisher}</p>
+        <p class="lh-sm">Ocupación: ${data.work.occupation}</p>
+        <p class="lh-sm">Primera Aparición: ${data.biography["first-appearance"]} </p>
+        <p class="lh-sm">Altura: ${data.appearance.height} </p>
+        <p class="lh-sm">Peso: ${data.appearance.weight}</p>
+        <p class="lh-sm">Alianzas: ${data.biography.aliases} </p>`
           
         $('#title').text("SuperHero Encontrado")
         $('#imgSuperHero').html($img);
